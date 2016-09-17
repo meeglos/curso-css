@@ -28,6 +28,7 @@ h1 span {
 }
 nav {
 	margin-left: auto;
+	margin-right: 20px;
 }
 .menu {
 	list-style: none;
