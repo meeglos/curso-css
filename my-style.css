@@ -16,15 +16,15 @@ header {
 }
 h1 {
 	margin: 0;
-	padding: 20px 15px 10px 25px;
+	padding: 10px 15px 10px 25px;
 }
 h1 span {
 	display: block;
 	font-size: .5em;
 	font-weight: 100;
 	text-align: right;
-	line-height: 1.5em;
-	letter-spacing: 0.2em;
+	line-height: 1.2em;
+	letter-spacing: 0.4em;
 }
 nav {
 	margin-left: auto;
@@ -42,7 +42,7 @@ nav {
 	display: block;
 	padding: 0 1em;
 	line-height: 2;
-	color: #FFFFFF;
+	color: #333333;
 }
 .menu a:hover {
 	background: #333333;
