@@ -1,34 +1,37 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Source+Code+Pro:200,300,400,700&subset=latin-ext';
 * {
+	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
-	box-sizing: border-box;
 }
 body {
 	background-color: #00F5FF;
 	font-size: 16px;
 }
 header {
-	display: flex;
 	align-items: center;
+	display: flex;
 	margin: 2em;
 }
 h1 {
 	color: #333333;
 }
 h1 span {
-	display: block;
-	line-height: 0.9em;
-	font-size: .5em;
-	font-weight: 200;
-	letter-spacing: .4em;
-	text-align: right;
-	color: #FFF;
 	background: #333;
-	padding: .5em .2em;
 	border-radius: .2em;
 	box-shadow: .15em .15em .2em #666;
+	color: #FFF;
+	display: block;
+	font-family: 'Source Code Pro', monospaced;
+	font-size: .4em;
+	font-weight: 200;
+	letter-spacing: .4em;
+	line-height: 0.9em;
+	padding: .5em .2em;
+	text-align: right;
 }
 nav {
+	/*position: relative;*/
 	margin-left: auto;
 }
 nav ul, ol {
@@ -36,23 +39,25 @@ nav ul, ol {
 }
 .menu {
 	display: flex;
+	align-items: center;
 	width: 100%;
 }
-.menu ul li {
+.menu li {
 	flex: 1 1 auto;
+	/*position: relative;*/
 }
 .menu li > a {
-	border-right: 1px dashed #666git sta;
 	background-color: #333;
 	color: #fff;
 	display: block;
-	margin-top: .09em;
+	font-family: Inconsolata, monospaced;
+	font-size: 1.09em;
+	margin-top: .1em;
 	padding: 1rem 1.5rem;
 	text-decoration: none;
 	transition: all .4s ease-in-out;
-	font-size: 1.09em;
 }
-.menu > li:not(:last-child) > a {
+.menu li:not(:last-child) > a {
 	border-right: 1px dashed #666;
 	box-shadow: 1px 0 1px #333 inset;
 }
@@ -60,10 +65,23 @@ nav ul, ol {
 	background-color:#434343;
 	color: #00F5FF;
 }
-.menu li ul  {
-	display: none;  /* ocultamos TODOS los elementos <ul> que estén dentro de un <li> */
+.menu li > ul {
+	display: none;  /* Ocultamos todos los elementos del segundo y tercer nivel   */
 }
-
+.menu li:hover > ul  { /* Mostramos los elementos hijos directos del elemento actual al hacer hover sobre el li */
+	display: flex;
+	position: absolute;
+	transition: all .4s ease-in-out;
+}
+.menu ul ul {
+	left: 0%;
+	right: 0%;
+	/*position: fixed;*/
+	flex: 1 1 auto;
+}
+.menu ul li ul {
+	display: none;  /* ocultamos TODOS los elementos <ul> que estén dentro de otro <ul> */
+}
 
 
 /*
