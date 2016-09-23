@@ -1,52 +1,77 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Source+Code+Pro:200,300,400,700&subset=latin-ext';
 * {
-	font-family: sans-serif;
 	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
 }
 body {
-	background-color: #A7DBD8;
-	color: #334455;
-	margin: 0;
-	padding: 0;
+	background-color: #00F5FF;
+	font-size: 16px;
 }
 header {
-	display: flex;
-	-ms-align-items: center;
 	align-items: center;
-	padding: .5em 0;
+	display: flex;
+	margin: 2em;
 }
 h1 {
-	margin: 0;
-	padding: 10px 15px 10px 25px;
+	color: #333333;
 }
 h1 span {
+	background: #333;
+	border-radius: .2em;
+	box-shadow: .15em .15em .2em #666;
+	color: #FFF;
 	display: block;
-	font-size: .5em;
-	font-weight: 100;
+	font-family: 'Source Code Pro', monospaced;
+	font-size: .4em;
+	font-weight: 200;
+	letter-spacing: .4em;
+	line-height: 0.9em;
+	padding: .5em .2em;
 	text-align: right;
-	line-height: 1.2em;
-	letter-spacing: 0.4em;
 }
 nav {
 	margin-left: auto;
-	margin-right: 20px;
-}
-.menu {
-	list-style: none;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 0;
 	display: flex;
 }
-.menu a {
-	text-decoration: none;
-	display: block;
-	padding: 0 1em;
-	line-height: 2;
-	color: #333333;
+nav ul, ol {
+	list-style:none;
 }
-.menu a:hover {
-	background: #333333;
-	border-radius: .2em;
-	color: #A7DBD8;
-	text-shadow: .03em .01em .01em #FFF;
+.menu {
+	position: relative;
+
+	display: flex;
+}
+.menu li {
+	flex: auto;
+}
+.menu li > a {
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	display: block;
+	font-family: Inconsolata, monospaced;
+	font-size: 1.09em;
+	padding: 1em 1.8em;
+	text-decoration: none;
+	transition: all .4s ease-in-out;
+	border-bottom: 1px dashed #666;
+}
+.menu li:not(:last-child) > a {
+	border-right: 1px dashed #666;
+	box-shadow: 1px 0 1px #333 inset;
+}
+.menu li a:hover {
+	background-color:#434343;
+	color: #00F5FF;
+}
+.menu li > ul {
+	display: none;  /* Ocultamos todos los elementos del segundo y tercer nivel   */
+}
+.menu li:hover > ul  { /* Mostramos los elementos hijos directos del elemento actual al hacer hover sobre el li */
+	display: flex;
+	position: absolute;
+	/*transition: all .4s ease-in-out;*/ /* ====================> NOT WORKING! <======================*/
+	left: 0%;
+	right: 0%;
 }
