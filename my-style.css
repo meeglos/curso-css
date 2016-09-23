@@ -31,31 +31,31 @@ h1 span {
 	text-align: right;
 }
 nav {
-	/*position: relative;*/
 	margin-left: auto;
+	display: flex;
 }
 nav ul, ol {
 	list-style:none;
 }
 .menu {
+	position: relative;
+
 	display: flex;
-	align-items: center;
-	width: 100%;
 }
 .menu li {
-	flex: 1 1 auto;
-	/*position: relative;*/
+	flex: auto;
 }
 .menu li > a {
+	text-align: center;
 	background-color: #333;
 	color: #fff;
 	display: block;
 	font-family: Inconsolata, monospaced;
 	font-size: 1.09em;
-	margin-top: .1em;
-	padding: 1rem 1.5rem;
+	padding: 1em 1.8em;
 	text-decoration: none;
 	transition: all .4s ease-in-out;
+	border-bottom: 1px dashed #666;
 }
 .menu li:not(:last-child) > a {
 	border-right: 1px dashed #666;
@@ -71,70 +71,7 @@ nav ul, ol {
 .menu li:hover > ul  { /* Mostramos los elementos hijos directos del elemento actual al hacer hover sobre el li */
 	display: flex;
 	position: absolute;
-	transition: all .4s ease-in-out;
-}
-.menu ul ul {
+	/*transition: all .4s ease-in-out;*/ /* ====================> NOT WORKING! <======================*/
 	left: 0%;
 	right: 0%;
-	/*position: fixed;*/
-	flex: 1 1 auto;
 }
-.menu ul li ul {
-	display: none;  /* ocultamos TODOS los elementos <ul> que estén dentro de otro <ul> */
-}
-
-
-/*
-
-º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º
-º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º
-º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º/º
-
-
-.menu ul li {
-	flex: 1 1 auto;
-}
-.menu li > a {
-	background-color: #333;
-	color: #fff;
-	display: block;
-	margin-top: .09em;
-	padding: 1rem 1.5rem;
-	text-decoration: none;
-	transition: all .25s ease-in-out;
-}
-
-.menu li a:hover {
-	background-color:#434343;
-	color: #00F5FF;
-}
-
-.menu li ul {
-	display:none;
-	position:absolute;
-	/*min-width:160px;
-	font-size: .9em;
-}
-
-.menu li:hover > ul {
-	display:flex;
-	right: 0em;
-	left: 0em;
-	top: 100%;
-}
-
-.menu ul ul {
-	/*flex: 1 1 auto;
-	/*position:relative;
-	display: flex;
-	top: 100%;
-}
-
-.menu li li li {
-	flex: 1 1 auto;
-	top:100%;
-	right: 0%;
-	left: 0%;
-	position: absolute;
-}
-*/
