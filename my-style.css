@@ -11,19 +11,22 @@ body {
 header {
 	align-items: center;
 	display: flex;
-	margin: 2em;
+	margin: 1em 1.8em;
 }
 h1 {
 	color: #333333;
+	font-size: 2.3em;
+	letter-spacing: .1em;
+	text-shadow: -1px -2px 2px #999;
 }
 h1 span {
 	background: #333;
 	border-radius: .2em;
-	box-shadow: .15em .15em .2em #666;
-	color: #FFF;
+	box-shadow: .15em .15em .1em #666;
+	color: #FFFF00;
 	display: block;
 	font-family: 'Source Code Pro', monospaced;
-	font-size: .4em;
+	font-size: .42em;
 	font-weight: 200;
 	letter-spacing: .4em;
 	line-height: 0.9em;
@@ -39,7 +42,6 @@ nav ul, ol {
 }
 .menu {
 	position: relative;
-
 	display: flex;
 }
 .menu li {
@@ -52,7 +54,7 @@ nav ul, ol {
 	display: block;
 	font-family: Inconsolata, monospaced;
 	font-size: 1.09em;
-	padding: 1em 1.8em;
+	padding: .5em 1.2em;
 	text-decoration: none;
 	transition: all .4s ease-in-out;
 	border-bottom: 1px dashed #666;
@@ -64,14 +66,30 @@ nav ul, ol {
 .menu li a:hover {
 	background-color:#434343;
 	color: #00F5FF;
+	cursor: hand;
 }
 .menu li > ul {
-	display: none;  /* Ocultamos todos los elementos del segundo y tercer nivel   */
+	display: none;  /* Hide all 2dn and 3rd level items   */
 }
-.menu li:hover > ul  { /* Mostramos los elementos hijos directos del elemento actual al hacer hover sobre el li */
+.menu li:hover > ul  { /* Display all direct children of hovered item */
 	display: flex;
 	position: absolute;
 	/*transition: all .4s ease-in-out;*/ /* ====================> NOT WORKING! <======================*/
 	left: 0%;
 	right: 0%;
+}
+.container {
+	width: 80%;
+	margin: 3em auto;
+	border-top: 2px dashed #666;
+	padding-top: 1em;
+}
+.container h2, .container p {
+	margin-bottom: 1em;
+	font-family: 'Source Code Pro', monospaced;
+	font-weight: 200;
+	color: #FFF;
+	background-color: #333;
+	padding: 1em;
+	font-size: 1.1em;
 }
