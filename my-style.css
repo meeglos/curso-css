@@ -58,25 +58,33 @@ nav ul, ol {
 	text-decoration: none;
 	transition: all .4s ease-in-out;
 	border-bottom: 1px dashed #666;
+	/*margin-bottom: 1px;*/
 }
 .menu li:not(:last-child) > a {
 	border-right: 1px dashed #666;
 	box-shadow: 1px 0 1px #333 inset;
 }
-.menu li a:hover {
+.menu li > a:hover {
 	background-color:#434343;
 	color: #00F5FF;
 	cursor: hand;
 }
 .menu li > ul {
-	display: none;  /* Hide all 2dn and 3rd level items   */
+	display: none;   /*  Hide all 2dn and 3rd level items   */
+	/*opacity: 0;*/
+	height: 0;
 }
-.menu li:hover > ul  { /* Display all direct children of hovered item */
+.menu li:hover > ul  { /* Displays all direct children of hovered item */
 	display: flex;
 	position: absolute;
-	/*transition: all .4s ease-in-out;*/ /* ====================> NOT WORKING! <======================*/
+	transition: all .4s ease-in-out; /* ====================> NOT WORKING! <======================*/
 	left: 0%;
 	right: 0%;
+	/*opacity: 1;*/
+}
+.menu li:hover > a {
+	background: #434343;
+	color: #00F5FF;
 }
 .container {
 	width: 80%;
